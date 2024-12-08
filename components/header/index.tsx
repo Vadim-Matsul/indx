@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 
 import { motion } from 'framer-motion'
 import React from 'react'
@@ -16,7 +16,7 @@ const headerDesktopHeight = 80
 
 type Props = {}
 
-export function Header({}: Props) {
+export function Header({ }: Props) {
   const isMenuOpenState = useINDXState(false)
   const shouldHideState = useINDXState(false)
 
