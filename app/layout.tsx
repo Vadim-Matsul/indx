@@ -5,6 +5,9 @@ import './style/global.css'
 export const metadata: Metadata = {
   title: 'INDX',
   description: 'Превращаем ресурсы в цифровые активы',
+  icons: {
+    icon: "/images/favicon.png",
+  },
 }
 
 type Props = {

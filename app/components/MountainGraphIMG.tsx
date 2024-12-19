@@ -2,7 +2,7 @@ import { cn } from '@/utils/cn'
 
 type Props = {}
 
-export function MountainGraphIMG({}: Props) {
+export function MountainGraphIMG({ }: Props) {
   return (
     <section
       className={cn(
@@ -11,7 +11,7 @@ export function MountainGraphIMG({}: Props) {
         'h-[267px] md:h-[300px] lg:h-[513px] 1.5xl:h-[569px]'
       )}
     >
-      <img src='/images/mountain_graph.png' className='relative z-[2] h-full w-full object-cover' />
+      <img src='/images/mountain_graph.png' className='relative z-[2] h-full w-full object-cover md:object-fill' />
     </section>
   )
 }

@@ -58,8 +58,8 @@ export function ResolveTasks({ }: Props) {
           </div>
 
           <p className='mt-6 text-xs leading-none text-light-gray xs:max-w-[80%] md:max-w-none lg:mt-8 lg:text-sm lg:leading-[19px]'>
-            Блокчейн-технологии обходят санкции на фиатные платежи, обеспечивая безопасные
-            международные операции и снижая риски заморозки средств.
+            Блокчейн-технологии обходят санкции на&nbsp;фиатные&nbsp;платежи, обеспечивая безопасные
+            международные операции и&nbsp;снижая риски заморозки средств.
           </p>
         </li>
 
@@ -80,8 +80,7 @@ export function ResolveTasks({ }: Props) {
           </div>
 
           <p className='mt-6 text-xs leading-none text-light-gray xs:max-w-[80%] md:max-w-none lg:mt-8 lg:text-sm lg:leading-[19px]'>
-            Токенизация ресурсов облегчает выход на международные рынки, повышает ликвидность и
-            упрощает сделки с иностранными партнерами.
+            Токенизация ресурсов облегчает выход на&nbsp;международные рынки, повышает&nbsp;ликвидность и&nbsp;упрощает сделки с&nbsp;иностранными партнерами.
           </p>
         </li>
 
@@ -94,7 +93,7 @@ export function ResolveTasks({ }: Props) {
               'max-w-[310px] text-sm font-semibold leading-[17.36px] md:h-14 md:max-w-[200px] lg:h-[77px] lg:max-w-[320px] lg:text-xl lg:leading-[25px]'
             )}
           >
-            Возможность держать активы в блокчейне без валютных рисков.
+            Возможность держать активы в&nbsp;блокчейне без&nbsp;валютных рисков.
           </h4>
 
           <div className='mt-6 flex items-center justify-center lg:mt-8'>
@@ -105,8 +104,8 @@ export function ResolveTasks({ }: Props) {
           </div>
 
           <p className='mt-6 text-xs leading-none text-light-gray xs:max-w-[80%] md:max-w-none lg:mt-8 lg:text-sm lg:leading-[19px]'>
-            Токены, обеспеченные реальными ресурсами, позволяют хранить активы в блокчейне, защищая
-            от валютных колебаний и упрощая участие в глобальных сделках.
+            Токены, обеспеченные реальными ресурсами, позволяют хранить&nbsp;активы в&nbsp;блокчейне,
+            защищая&nbsp;от&nbsp;валютных колебаний и&nbsp;упрощая участие в&nbsp;глобальных сделках.
           </p>
         </li>
       </ul>
