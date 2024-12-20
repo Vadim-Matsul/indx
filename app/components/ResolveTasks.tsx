@@ -57,7 +57,7 @@ export function ResolveTasks({ }: Props) {
             />
           </div>
 
-          <p className='mt-6 text-xs leading-none text-light-gray xs:max-w-[80%] md:max-w-none lg:mt-8 lg:text-sm lg:leading-[19px]'>
+          <p className='mt-6 text-xs text-light-gray xs:max-w-[80%] md:max-w-none lg:mt-8 lg:text-sm lg:leading-[19px]'>
             Блокчейн-технологии обходят санкции на&nbsp;фиатные&nbsp;платежи, обеспечивая безопасные
             международные операции и&nbsp;снижая риски заморозки средств.
           </p>
@@ -79,7 +79,7 @@ export function ResolveTasks({ }: Props) {
             />
           </div>
 
-          <p className='mt-6 text-xs leading-none text-light-gray xs:max-w-[80%] md:max-w-none lg:mt-8 lg:text-sm lg:leading-[19px]'>
+          <p className='mt-6 text-xs text-light-gray xs:max-w-[80%] md:max-w-none lg:mt-8 lg:text-sm lg:leading-[19px]'>
             Токенизация ресурсов облегчает выход на&nbsp;международные рынки, повышает&nbsp;ликвидность и&nbsp;упрощает сделки с&nbsp;иностранными партнерами.
           </p>
         </li>
@@ -103,7 +103,7 @@ export function ResolveTasks({ }: Props) {
             />
           </div>
 
-          <p className='mt-6 text-xs leading-none text-light-gray xs:max-w-[80%] md:max-w-none lg:mt-8 lg:text-sm lg:leading-[19px]'>
+          <p className='mt-6 text-xs text-light-gray xs:max-w-[80%] md:max-w-none lg:mt-8 lg:text-sm lg:leading-[19px]'>
             Токены, обеспеченные реальными ресурсами, позволяют хранить&nbsp;активы в&nbsp;блокчейне,
             защищая&nbsp;от&nbsp;валютных колебаний и&nbsp;упрощая участие в&nbsp;глобальных сделках.
           </p>
