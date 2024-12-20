@@ -67,7 +67,7 @@ export function Header({ }: Props) {
   return (
     <header
       className={cn(
-        'fixed left-0 right-0 z-[10000] h-[var(--header-mobile-height)] bg-background text-foreground transition-all duration-700 md:h-[var(--header-desktop-height)]',
+        'fixed left-0 right-0 z-[10000] h-[var(--header-mobile-height)] bg-[#eaeaec] text-foreground transition-all duration-700 md:h-[var(--header-desktop-height)]',
         shouldHideState.state ? '-translate-y-full' : ''
       )}
     >
@@ -112,8 +112,8 @@ export function Header({ }: Props) {
 
                 <Drawer.Title />
 
-                <Drawer.Content className='fixed bottom-0 right-0 top-[var(--header-mobile-height)] z-[10000] w-[min(100vw,375px)] bg-background text-foreground shadow-foreground md:top-[var(--header-desktop-height)]'>
-                  <div className='h-full w-full bg-background px-6 text-foreground'>
+                <Drawer.Content className='fixed bottom-0 right-0 top-[var(--header-mobile-height)] z-[10000] w-[min(100vw,375px)] bg-[#eaeaec] text-foreground shadow-foreground md:top-[var(--header-desktop-height)]'>
+                  <div className='h-full w-full bg-[#eaeaec] px-6 text-foreground'>
                     <MobileNavigation />
                   </div>
                 </Drawer.Content>

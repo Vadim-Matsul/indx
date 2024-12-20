@@ -52,7 +52,7 @@ export function InteractionScheme({ }: Props) {
           </h4>
 
           <div className='mt-6 md:mt-8 lg:h-[256px] lg:min-h-[256px] 1.5xl:mt-6'>
-            <div className='mr-3 inline-block h-2 w-12 bg-gradient-to-r from-fierly via-[#EDCEC9] via-60% to-background' />
+            <div className='mr-3 inline-block h-2 w-12 bg-gradient-to-r from-fierly via-[#EDCEC9] via-60% to-[#eaeaec]' />
 
             <span className={cn('text-light-gray', 'text-xs leading-none', 'lg:text-sm')}>
               Каждый токен INDX выпускается строго в&nbsp;соотношении&nbsp;1:1 с&nbsp;обеспечением реальным
@@ -104,7 +104,7 @@ export function InteractionScheme({ }: Props) {
           </h4>
 
           <div className='mt-6 md:mt-8 lg:h-[256px] lg:min-h-[256px] 1.5xl:mt-6'>
-            <div className='mr-3 inline-block h-2 w-12 bg-gradient-to-r from-fierly via-[#EDCEC9] via-60% to-background' />
+            <div className='mr-3 inline-block h-2 w-12 bg-gradient-to-r from-fierly via-[#EDCEC9] via-60% to-[#EAEAEC]' />
 
             <span className={cn('text-light-gray', 'text-xs leading-none', 'lg:text-sm')}>
               Для&nbsp;исполнения контракта требуется собрать 2&nbsp;из&nbsp;3&nbsp;голосов. Голоса могут&nbsp;быть&nbsp;от&nbsp;покупателя&nbsp;(+1),

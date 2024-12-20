@@ -11,7 +11,7 @@ const isMaxWidth = () => window.innerWidth >= MD_SCREEN_WIDTH
 
 type Props = {}
 
-export function BurgerMenu({}: Props) {
+export function BurgerMenu({ }: Props) {
   const isOpenDisclosure = useDisclosure()
 
   React.useLayoutEffect(() => {
@@ -64,8 +64,8 @@ export function BurgerMenu({}: Props) {
         />
         <Drawer.Title />
 
-        <Drawer.Content className='fixed bottom-0 right-0 top-[var(--header-mobile-height)] w-[min(100vw,360px)] bg-background text-foreground shadow-lg shadow-foreground md:top-[var(--header-desktop-height)]'>
-          <div className='h-full w-full bg-background px-6 text-foreground xs:px-10'>
+        <Drawer.Content className='fixed bottom-0 right-0 top-[var(--header-mobile-height)] w-[min(100vw,360px)] bg-[#eaeaec] text-foreground shadow-lg shadow-foreground md:top-[var(--header-desktop-height)]'>
+          <div className='h-full w-full bg-[#eaeaec] px-6 text-foreground xs:px-10'>
             <Navigation />
           </div>
         </Drawer.Content>
