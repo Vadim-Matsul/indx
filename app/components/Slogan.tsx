@@ -1,9 +1,46 @@
 import { BoxReveal } from '@/components/ui/BoxReveal'
 import { cn } from '@/utils/cn'
+import { useLayoutEffect, useRef } from 'react'
 
 type Props = {}
 
 export function Slogan({ }: Props) {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useLayoutEffect(() => {
+    const videoEL = videoRef.current;
+    if (!videoEL) return;
+
+    videoEL.controls = false;
+    videoEL.playsInline = true;
+    videoEL.muted = true;
+    videoEL.defaultMuted = true
+    videoEL.autoplay = true;
+    videoEL.loop = true;
+
+    videoEL.play().catch((reason) => {
+      console.log('Ошибка автозапуска: ', reason)
+    })
+
+    function onPlay(evt: any) {
+      evt.preventDefault();
+      if (!videoEL) return;
+
+      // @ts-ignore
+      console.info('onPlay webkitDisplayingFullscreen', videoEL.webkitDisplayingFullscreen)
+
+      // @ts-ignore
+      if (videoEL.webkitDisplayingFullscreen && typeof videoEL.webkitDisplayingFullscreen == 'function') {
+        // @ts-ignore
+        videoEL.webkitExitFullscreen();
+      }
+    }
+    videoEL.addEventListener('play', onPlay);
+    return () => {
+      videoEL?.removeEventListener('play', onPlay)
+    }
+  }, [])
+
   return (
     <section className={cn('mx-auto mt-8 max-w-[1440px] overflow-x-hidden md:mt-3')}>
       <div>
@@ -37,10 +74,13 @@ export function Slogan({ }: Props) {
 
       <div key='slogan video' className={cn('relative mt-12 lg:mt-20 1.5xl:mt-24')}>
         <video
+          ref={videoRef}
           controls={false}
-          autoPlay
-          muted
-          loop
+          playsInline={true}
+          autoPlay={true}
+          muted={true}
+          loop={true}
+          style={{ background: 'transparent' }}
           className={cn(
             'flex h-full max-h-[274px] w-full justify-center object-center',
             'md:mx-auto md:scale-x-150',

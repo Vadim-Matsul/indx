@@ -1,8 +1,45 @@
 import { cn } from '@/utils/cn'
+import { useLayoutEffect, useRef } from 'react';
 
 type Props = {}
 
-export function Footer({}: Props) {
+export function Footer({ }: Props) {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useLayoutEffect(() => {
+    const videoEL = videoRef.current;
+    if (!videoEL) return;
+
+    videoEL.controls = false;
+    videoEL.playsInline = true;
+    videoEL.muted = true;
+    videoEL.defaultMuted = true
+    videoEL.autoplay = true;
+    videoEL.loop = true;
+
+    videoEL.play().catch((reason) => {
+      console.log('Ошибка автозапуска: ', reason)
+    })
+
+    function onPlay(evt: any) {
+      evt.preventDefault();
+      if (!videoEL) return;
+
+      // @ts-ignore
+      console.info('onPlay webkitDisplayingFullscreen', videoEL.webkitDisplayingFullscreen)
+
+      // @ts-ignore
+      if (videoEL.webkitDisplayingFullscreen && typeof videoEL.webkitDisplayingFullscreen == 'function') {
+        // @ts-ignore
+        videoEL.webkitExitFullscreen();
+      }
+    }
+    videoEL.addEventListener('play', onPlay);
+    return () => {
+      videoEL?.removeEventListener('play', onPlay)
+    }
+  }, [])
+
   return (
     <section className={cn('mx-auto max-w-[1440px]')}>
       <svg
@@ -35,7 +72,16 @@ export function Footer({}: Props) {
       </div>
 
       <div className='lg:h-[468px] 1.5xl:h-[682px]'>
-        <video controls={false} autoPlay muted loop className={cn('h-full w-full object-contain')}>
+        <video
+          ref={videoRef}
+          controls={false}
+          playsInline={true}
+          autoPlay={true}
+          muted={true}
+          loop={true}
+          style={{ background: 'transparent' }}
+          className={cn('h-full w-full object-contain')}
+        >
           <source src='wave.mp4' type='video/mp4' />
           Ваш браузер не поддерживает видео. Пожалуйста, обновите его.
         </video>
